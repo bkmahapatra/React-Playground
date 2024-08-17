@@ -1,10 +1,15 @@
+import { Outlet } from "react-router-dom";
 import "./App.css";
-import FileManager from "./pages/FileManager";
+import SideBar from "./layouts/SideBar";
 
 function App() {
   return (
-    <div>
-      <FileManager />
+    <div className="flex relative">
+      <SideBar />
+
+      <div className="flex-auto mx-auto ml-56 p-2">
+        <Outlet />
+      </div>
     </div>
   );
 }
