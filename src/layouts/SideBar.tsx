@@ -16,6 +16,7 @@ const SideBar = () => {
     { label: "Caraousal", link: "/caraousal" },
     { label: "Slider", link: "/slider" },
     { label: "Stopwatch", link: "/stop-watch" },
+    { label: "Auto complete search", link: "/auto-suggest" },
   ];
   return (
     <nav className="bg-gray-400 h-screen p-2 w-56 absolute top-0 left-0">
