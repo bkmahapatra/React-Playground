@@ -14,7 +14,7 @@ import InfiniteScroll from "./pages/InfiniteScroll.tsx";
 import StarRating from "./pages/StarRating.tsx";
 import Tab from "./pages/Tab.tsx";
 import AutoSuggest from "./pages/AutoSuggest.tsx";
-
+import AccordionPage from "./pages/Accordion.tsx";
 // import { lazy, Suspense } from "react";
 
 // const FileManager = lazy(() => import("./pages/FileManager.tsx"));
@@ -81,6 +81,10 @@ const router = createBrowserRouter([
       {
         path: "/auto-suggest",
         element: <AutoSuggest />,
+      },
+      {
+        path: "/accordion",
+        element: <AccordionPage />,
       },
     ],
   },
