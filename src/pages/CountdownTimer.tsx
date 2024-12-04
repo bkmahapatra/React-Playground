@@ -1,20 +1,21 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
 const CountdownTimer = () => {
-  const [timer, setTimer] = useState(10);
+  const [timer, setTimer] = useState(6);
 
-  let timerRef = useRef<number | null>(null);
+  console.log("component");
 
   useEffect(() => {
-    timerRef.current = setTimeout(() => {
-      setTimer((prev) => prev - 1);
-    }, 1000);
-
     if (timer <= 0) {
-      clearTimeout(timerRef.current);
+      return;
     }
 
-    return () => clearTimeout(timerRef.current);
+    const timoutId = setInterval(() => {
+      setTimer((prev) => prev - 1);
+    }, 1000);
+    console.log(timoutId);
+
+    return () => clearTimeout(timoutId);
   }, [timer]);
 
   return <div>{timer}</div>;
